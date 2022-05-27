@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <%- include('publicStyle.ejs'); %>
+        <%- include('detailedStyle.ejs'); %>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/movies/add">Add Movies</a></li>
+            </ul>
+        </div>
+        <h1>Movies List:</h1>
+        <% for(movie of movies) { %>
+            <div>
+            <a href="/movies/<%= movie.id %>" class="movie"><%= movie.title %></a><br><br><br><br>
+            </div>
+        <% } %>
+    </body>
+</html>

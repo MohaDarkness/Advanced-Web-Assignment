@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <%- include('publicStyle.ejs'); %>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/movies/add">Add Movies</a></li>
+            </ul>
+        </div>
+        <h1>Single Movie</h1><br><br><br>
+        <h2>Movie Title: <%= title %></h2>
+        <h2>Movie Release Date: <%= release %></h2>
+        <h2>Movie Genre: <%= genre %></h2>
+    </body>
+</html>

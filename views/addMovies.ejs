@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <%- include('publicStyle.ejs'); %>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/movies">Movies</a></li>
+                <li><a href="/movies/add">Add Movies</a></li>
+            </ul>
+        </div>
+
+        <form action="/movies" method="post">
+            <label for="mName">Title: </label>
+            <input id="mName" name="mName" type="text">
+            <br>
+            <label for="mRelease">Release: </label>
+            <input id="mRelease" name="mRelease" type="text">
+            <br>
+            <label>Genre:<input name="mGenre" list="mGenre" name="mGenre" /></label>
+            <datalist id="mGenre">
+                <option value="Action"></option>
+                <option value="Horror"></option>
+                <option value="Comedy"></option>
+                <option value="Fantasy"></option>
+                <option value="Thriller"></option>
+                <option value="Anime"></option>
+            </datalist>
+            <br><br>
+            <button onclick="submit">Add Movie</button>
+        </form>
+    </body>
+</html>
