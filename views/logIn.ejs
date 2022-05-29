@@ -1,7 +1,6 @@
 <html>
     <head>
         <%- include('publicStyle.ejs'); %>
-        <%- include('detailedStyle.ejs'); %>
     </head>
     <body>
         <div class="header">
@@ -13,11 +12,17 @@
                 <li><a href="/logIn">LogIn</a></li>
             </ul>
         </div>
-        <h1>Movies List:</h1>
-        <% for(movie of movies) { %>
-            <div>
-            <a href="/movies/<%= movie.id %>" class="movie"><%= movie.title %></a><br><br><br><br>
-            </div>
-        <% } %>
+
+        <h2 style="color:red"><%= error %></h2>
+
+        <form action="/logIn" method="post">
+            <label for="uName">User Name: </label>
+            <input id="uName" name="uName" type="text">
+            <br>
+            <label for="uPassword">Password: </label>
+            <input id="uPassword" name="uPassword" type="text">
+            <br><br>
+            <button onclick="submit">Log In</button>
+        </form>
     </body>
 </html>

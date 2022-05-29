@@ -4,8 +4,7 @@ var router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 
 router.get('/',(req, res, next)=>{
-    // res.sendFile(path.join(__dirname,"../","views","home.html"));
-    res.render(path.join(__dirname,"../","views","home.ejs"), {x:5});
+    res.render(path.join(__dirname,"../","views","home.ejs"), {logged:"You're not logged in"});
 });
 
 module.exports = router;

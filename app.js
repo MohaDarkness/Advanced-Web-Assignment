@@ -19,10 +19,12 @@ app.set('views', 'views');
 
 const homeRoute = require('./routes/home.js');
 const moviesRoute = require('./routes/movies.js'); 
+const usersRoute = require('./routes/users.js');
 // const addMovies = require('./routes/admin.js');
 
 app.use(homeRoute);
 app.use(moviesRoute);
+app.use(usersRoute);
 // app.use(addMovies)
 
 app.get(('*'),(req, res, next)=>{

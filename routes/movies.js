@@ -25,7 +25,6 @@ router.get('/movies', (req, res, next)=>{
     });
 });
 
-
 router.post('/movies', (req, res, next)=>{
     MoviesData.create({
         title: req.body.mName,

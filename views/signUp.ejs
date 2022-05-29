@@ -12,15 +12,20 @@
             </ul>
         </div>
 
-        <form action="/movies" method="post">
-            <label for="mName">Title: </label>
-            <input id="mName" name="mName" type="text">
+        <h2 style="color:red"><%= error %></h2>
+
+        <form action="/signUp" method="post">
+            <label for="uName">User Name: </label>
+            <input id="uName" name="uName" type="text">
             <br>
-            <label for="mRelease">Release: </label>
-            <input id="mRelease" name="mRelease" type="text">
+            <label for="uPassword">Password: </label>
+            <input id="uPassword" name="uPassword" type="text">
             <br>
-            <label>Genre:<input name="mGenre" list="mGenre" name="mGenre" /></label>
-            <datalist id="mGenre">
+            <label for="uAge">Age: </label>
+            <input id="uAge" name="uAge" type="number">
+            <br>
+            <label>Favorite Genre:<input name="uFavGenre" list="uFavGenre" name="uFavGenre" /></label>
+            <datalist id="uFavGenre">
                 <option value="Action"></option>
                 <option value="Horror"></option>
                 <option value="Comedy"></option>
@@ -29,7 +34,7 @@
                 <option value="Anime"></option>
             </datalist>
             <br><br>
-            <button onclick="submit">Add Movie</button>
+            <button onclick="submit">SignUp</button>
         </form>
     </body>
 </html>
