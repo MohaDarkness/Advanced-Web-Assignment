@@ -16,14 +16,11 @@ var MoviesData = mongoose.model('MoviesData', movieSchema);
 
 
 router.get('/movies/add', (req, res, next)=>{
-    var movies = MoviesData.find({},(err, movies)=>{
-        res.render('addMovies', movies);
-    });
+    res.render('addMovies');
 });
 
 router.get('/movies', (req, res, next)=>{
     var movies = MoviesData.find({},(err, movies)=>{
-        console.log(movies);
         res.render('movies', {movies});
     });
 });
