@@ -1,8 +1,7 @@
 <html>
     <head>
         <%- include('publicStyle.ejs'); %>
-        <%- include('detailedStyle.ejs'); %>
-        <title>MOVIES LIBRARY</title>
+        <title>Admin</title>
     </head>
     <body>
         <div class="header">
@@ -14,11 +13,16 @@
                 <li><a href="/logIn">LogIn</a></li>
             </ul>
         </div>
-        <h1>Movies List:</h1>
-        <% for(movie of movies) { %>
-            <div>
-            <a href="/movies/<%= movie.id %>" class="movie"><%= movie.title %></a><br><br><br><br>
-            </div>
-        <% } %>
+        
+
+
+        <%
+            for(user of data){
+                %>
+                <h1><%= user["name"] %></h1>
+                <%
+            }
+        %>
+
     </body>
 </html>

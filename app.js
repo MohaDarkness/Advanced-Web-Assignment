@@ -18,13 +18,15 @@ app.set('view engine', 'ejs');
 app.set('views', 'views');
 
 const homeRoute = require('./routes/home.js');
-const moviesRoute = require('./routes/movies.js'); 
+const moviesRoute = require('./routes/movies.js');
 const usersRoute = require('./routes/users.js');
+const adminRoute = require('./routes/admin.js');
 // const addMovies = require('./routes/admin.js');
-
+console.log("Am I here?");
 app.use(homeRoute);
 app.use(moviesRoute);
 app.use(usersRoute);
+app.use(adminRoute);
 // app.use(addMovies)
 
 app.get(('*'),(req, res, next)=>{

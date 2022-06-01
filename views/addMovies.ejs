@@ -1,6 +1,7 @@
 <html>
     <head>
         <%- include('publicStyle.ejs'); %>
+        <title> <%= add + title + edit%> </title>
     </head>
     <body>
         <div class="header">
@@ -9,18 +10,21 @@
                 <li><a href="/movies">Movies</a></li>
                 <li><a href="/movies/add">Add Movies</a></li>
                 <li><a href="/signUp">SignUp</a></li>
+                <li><a href="/logIn">LogIn</a></li>
             </ul>
         </div>
 
         <form action="/movies" method="post">
+            <input type="number" id="flag" name="flag" hidden=true value="<%= flag %>">
+            <input type="text" id="mID" name="mID" hidden=true value="<%= m_id %>">
             <label for="mName">Title: </label>
-            <input id="mName" name="mName" type="text">
+            <input id="mName" name="mName" type="text" value="<%= title %>">
             <br>
             <label for="mRelease">Release: </label>
-            <input id="mRelease" name="mRelease" type="text">
+            <input id="mRelease" name="mRelease" type="text" value="<%= release %>">
             <br>
             <label>Genre:<input name="mGenre" list="mGenre" name="mGenre" /></label>
-            <datalist id="mGenre">
+            <datalist id="mGenre" value="<%= genre %>">
                 <option value="Action"></option>
                 <option value="Horror"></option>
                 <option value="Comedy"></option>

@@ -1,6 +1,7 @@
 <html>
     <head>
         <%- include('publicStyle.ejs'); %>
+        <title><%= title %></title>
     </head>
     <body>
         <div class="header">
@@ -16,5 +17,19 @@
         <h2>Movie Title: <%= title %></h2>
         <h2>Movie Release Date: <%= release %></h2>
         <h2>Movie Genre: <%= genre %></h2>
+        <form action="/" method=""></form>
+        <% 
+        var deletePath="/movies/"+m_id+"/delete";
+        var editPath="/movies/"+m_id+"/update";
+        %> 
+        <form method=PUT action=<%= editPath %>>
+            <input type="text" id="mID" hidden="true" value=<%= m_id %> >
+            <button type="submit">Edit</button>
+        </form>
+
+        <form method=delete action=<%= deletePath %>>
+            <input type="text" id="mID" hidden="true" value=<%= m_id %> >
+            <button type="submit">Delete</button>
+        </form>
     </body>
 </html>
