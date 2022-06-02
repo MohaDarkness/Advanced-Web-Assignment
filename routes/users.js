@@ -39,7 +39,7 @@ router.post('/signUp', (req, res, next)=>{
 });
 
 router.get('/logIn',(req, res, next)=>{
-    res.render(path.join(__dirname,"../","views","logIn.ejs"), {error:""});
+    res.render(path.join(__dirname,"../","views","logIn.ejs"), {error:"",});
 });
 
 router.post('/logIn', (req, res, next)=>{
@@ -50,16 +50,15 @@ router.post('/logIn', (req, res, next)=>{
         }
         else{
             if(req.body.uPassword == data[0].password){
-                res.render(path.join(__dirname,"../","views","home.ejs"), {logged:"You're logged in"});
+                res.render(path.join(__dirname,"../","views","home.ejs"), {logged:"You're logged in", tab_title:"Home"});
             }
             else{
                 console.log(data[0].password);
-                res.render(path.join(__dirname,"../","views","logIn.ejs"), {error:"Incorrect Password!!"});
+                res.render(path.join(__dirname,"../","views","logIn.ejs"), {error:"Incorrect Password!!", tab_title:"Log in"});
             }
         }
     });
     
 });
-
 
 module.exports = router;
