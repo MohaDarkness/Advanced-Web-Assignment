@@ -62,6 +62,7 @@ router.get("/movies/:id/delete", (req, res, next) => {
     });
 });
 
+
 router.get("/movies/:id/update", (req, res, next) => {
     MoviesData.findById(req.params.id,(err, movie)=>{
         // console.log(movie._id);
