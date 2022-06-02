@@ -5,6 +5,7 @@ var path = require('path');
 var router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 
+
 const userSchema = new mongoose.Schema({
     username:  {type:String, require:true, unique:true},
     age:       {type:Number, require:true},

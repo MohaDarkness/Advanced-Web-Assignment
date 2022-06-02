@@ -6,6 +6,7 @@ var router = express.Router();
 
 router.use(express.urlencoded({ extended: true }));
 
+
 const movieSchema = new mongoose.Schema({
     title:  {type:String, require:true},
     release:{type:Number, require:true},
